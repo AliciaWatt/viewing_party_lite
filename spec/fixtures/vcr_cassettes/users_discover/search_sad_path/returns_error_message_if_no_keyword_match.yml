@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/search/movie?api_key=DONT SHOW MY API KEY&page=1&query=dogggggggggg
+    uri: https://api.themoviedb.org/3/search/movie?api_key=DONT SHOW MY API KEY&page=1&query=xwlijg
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 12 May 2022 16:21:05 GMT
+      - Thu, 12 May 2022 17:05:59 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,20 +42,20 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 c29390732f5bc4b2c7832623ae6e492e.cloudfront.net (CloudFront)
+      - 1.1 ce4b35590464ed34415a13badd946eba.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - bSokZ7lHRzieiiVENSN523lt7Jle7MHyM6-UKYeIKAXYxMhLm4aTUA==
+      - oIPaKK_r6SU055E5Gwg4bnekD-f3ueY0jiIpG2ZvzFAfvAfYnZJHXg==
       Age:
-      - '67'
+      - '99'
     body:
       encoding: ASCII-8BIT
       string: '{"page":1,"results":[],"total_pages":0,"total_results":0}'
-  recorded_at: Thu, 12 May 2022 16:22:12 GMT
+  recorded_at: Thu, 12 May 2022 17:07:38 GMT
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/search/movie?api_key=DONT SHOW MY API KEY&page=2&query=dogggggggggg
+    uri: https://api.themoviedb.org/3/search/movie?api_key=DONT SHOW MY API KEY&page=2&query=xwlijg
     body:
       encoding: US-ASCII
       string: ''
@@ -78,7 +78,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 12 May 2022 16:21:05 GMT
+      - Thu, 12 May 2022 17:05:59 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -95,15 +95,15 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 48a6ccbb0ddb052ab512a3422295bd38.cloudfront.net (CloudFront)
+      - 1.1 2ad801a60bd36fbeb6a62fab7eabe330.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - QG1XU4fdPfbmT_JhMWLVdApb_mazf2eb3UKGc0rF5SzQO0Lsi5dNQQ==
+      - 3Lk368I-8DfV4V-n7gVTfRx6QciBxAsV0Mi0NkVSwWZX3oZbz6GdHQ==
       Age:
-      - '67'
+      - '99'
     body:
       encoding: ASCII-8BIT
       string: '{"page":2,"results":[],"total_pages":0,"total_results":0}'
-  recorded_at: Thu, 12 May 2022 16:22:12 GMT
+  recorded_at: Thu, 12 May 2022 17:07:38 GMT
 recorded_with: VCR 6.1.0
