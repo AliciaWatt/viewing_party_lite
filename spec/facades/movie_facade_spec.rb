@@ -24,6 +24,7 @@ RSpec.describe MovieFacade do
     results = facade.top20(data)
     expect(results).to be_an Array
     expect(results).to be_all MovieBrief
+    expect(results[0].id).to eq(278)
     expect(results[0].title).to eq('The Shawshank Redemption')
     expect(results[0].vote_average).to eq(8.7)
   end
@@ -36,5 +37,10 @@ RSpec.describe MovieFacade do
     expect(results.count).to eq(40)
     expect(results[0].title).to eq("The King's Man")
     expect(results[0].vote_average).to eq(6.9)
+  end
+
+  it 'returns detailed movie data', :vcr do 
+    results = facade.movie_data(278)
+require 'pry'; binding.pry
   end
 end

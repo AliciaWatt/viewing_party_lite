@@ -16,6 +16,18 @@ class TmdbService
     get_url("search/movie?&query=#{keyword}&page=#{page}")
   end
 
+  def detailed_data(id)
+    get_url("movie/#{id}")
+  end
+
+  def cast_data(id)
+    get_url("movie/#{id}/credits")
+  end
+
+  def reviews_data(id)
+    get_url("movie/#{id}/reviews")
+  end
+
   def get_url(url)
     response = @conn.get(url.to_s)
     JSON.parse(response.body, symbolize_names: true)

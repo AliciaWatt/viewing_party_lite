@@ -12,6 +12,10 @@ class MoviesController < ApplicationController
     end
   end
 
+  def show 
+    @results = facade.movie_data(params[:id])
+  end
+
   def facade
     @facade ||= MovieFacade.new
   end

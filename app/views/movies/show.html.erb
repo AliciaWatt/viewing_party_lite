@@ -1,0 +1,68 @@
+<%= render partial: 'partials/navbar_default' %>
+
+<br>
+<h4>Movie Details:</h4>
+<table class="table table-hover">
+<thead>
+  <tr>
+    <th scope="row"></th>
+    <th scope="col">Title</th>
+    <th scope="col">Vote Average</th>
+    <th scope="col">Runtime</th>
+    <th scope="col">Genre(s)</th>
+    <th scope="col">Summary</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <th scope="row"></th>
+  <td> <%= @results[:details][:title]%></td>
+  <td> <%= @results[:details][:runtime] %></td>
+  <td> <%= @results[:details][:vote_average] %></td>
+  <td> <% @results[:details][:genre].each do|genre| %>
+    <%= genre %>
+    <% end %>
+    </td>
+  <td> <%= @results[:details][:summary] %></td>
+</div>
+</table>
+ <br>
+
+ <h4>Cast:</h4>
+<table class="table table-hover">
+<thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Character</th>
+    <th scope="col">Played by</th>
+  </tr>
+</thead>
+<tbody>
+<% @results[:cast].each_with_index do |cast, index|%>
+  <th scope="row"><%= index+1 %></th>
+  <td> <%= cast[:character] %></td>
+  <td> <%= cast[:name]%></td>
+</div>
+</tbody>
+<% end %>
+</table>
+ <br>
+
+<h4>Reviews(<%= @results[:reviews][:review_count] %>):</h4>
+<table class="table table-hover">
+<thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Author</th>
+    <th scope="col">Content</th>
+  </tr>
+</thead>
+<tbody>
+<% @results[:reviews][:review_detail].each_with_index do |review, index|%>
+  <th scope="row"><%= index+1 %></th>
+  <td> <%= review[:author]%></td>
+  <td> <%= review[:content]%></td>
+</div>
+</tbody>
+<% end %>
+</table>
