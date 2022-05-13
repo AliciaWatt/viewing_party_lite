@@ -1,7 +1,11 @@
 class MovieDetail
+<<<<<<< HEAD
 
   attr_reader :title, :vote_average, :runtime_min, :runtime, :genre, :summary, :id, :poster_path
 
+=======
+  attr_reader :title, :vote_average, :runtime_min, :runtime, :genre, :summary, :id, :poster_path
+>>>>>>> 7d246d7 (merged with main)
 
   def initialize(data)
     @id = data[:id]
