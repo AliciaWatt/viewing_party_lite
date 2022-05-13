@@ -12,7 +12,8 @@ class MovieBrief
     results[:title] = detailed_data[:title]
     results[:vote_average] = detailed_data[:vote_average]
     results[:genre] = detailed_data[:genres].collect {|genre| genre[:name]}
-    results[:runtime] = detailed_data[:runtime]
+    results[:runtime] = "#{detailed_data[:runtime]/60}h #{detailed_data[:runtime] % 60}min"
+
     results[:summary] = detailed_data[:overview]
     results
   end

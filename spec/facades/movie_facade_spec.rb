@@ -41,6 +41,5 @@ RSpec.describe MovieFacade do
 
   it 'returns detailed movie data', :vcr do 
     results = facade.movie_data(278)
-require 'pry'; binding.pry
   end
 end
