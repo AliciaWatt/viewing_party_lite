@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -44,9 +44,9 @@ group :development, :test do
   gem 'figaro'
   gem 'pry'
   gem 'rspec-rails'
-  gem 'rubocop', '~> 1.18.0', require: false
-  gem 'rubocop-performance', '~> 1.11.0', require: false
-  gem 'rubocop-rails', '~> 2.11.0', require: false
+  # gem 'rubocop', '~> 1.18.0', require: false
+  # gem 'rubocop-performance', '~> 1.11.0', require: false
+  # gem 'rubocop-rails', '~> 2.11.0', require: false
 end
 
 group :development do
