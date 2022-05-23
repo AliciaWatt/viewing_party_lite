@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'movie details page' do
-  let!(:user) { User.create!(name: 'person', email: 'email@email.com') }
+  let!(:user) { User.create!(name: 'person', email: 'email@email.com', password: '123', password_confirmation: '123') }
+
   before :each do
     details = JSON.parse(File.read('spec/fixtures/movie_details.json'), symbolize_names: true)
     allow(TmdbService).to receive(:movie_details).and_return(details)

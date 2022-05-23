@@ -8,6 +8,8 @@ RSpec.describe 'new user page' do
   it 'can create new user' do
     fill_in 'user[name]', with: 'Greg'
     fill_in 'user[email]', with: 'greg@email.com'
+    fill_in 'user[password]', with: "password"
+    fill_in 'user[password_confirmation]', with: "password"
     click_button('Create New User')
     user = User.last
 
@@ -20,6 +22,8 @@ RSpec.describe 'new user page' do
 
     fill_in 'user[name]', with: 'Greg2'
     fill_in 'user[email]', with: 'greg@email.com'
+    fill_in 'user[password]', with: "password"
+    fill_in 'user[password_confirmation]', with: "passwordabc"
     click_button('Create New User')
 
     expect(current_path).to eq('/register')
