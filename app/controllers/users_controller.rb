@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   def login_user
     user = User.find_by(email: params[:email])
     if !user || !user.authenticate(params[:password])
-      flash[:error] = "Email or password incorrect"
+      flash[:error] = "incorrect credentials"
       render :login_form
     elsif user.authenticate(params[:password])
       session[:user_id] = user.id

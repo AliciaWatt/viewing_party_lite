@@ -21,7 +21,7 @@ RSpec.describe 'login page' do
       click_button("Log In")
 
       expect(current_path).to eq("/login")
-      expect(page).to have_content("Email or password incorrect")
+      expect(page).to have_content("incorrect credentials")
     end
 
     it "redirects back to login page if email is not in system" do
@@ -32,7 +32,7 @@ RSpec.describe 'login page' do
       click_button("Log In")
 
       expect(current_path).to eq("/login")
-      expect(page).to have_content("Email or password incorrect")
+      expect(page).to have_content("incorrect credentials")
     end
 
     it "redirects back to login page if passwords do not match" do
@@ -43,7 +43,7 @@ RSpec.describe 'login page' do
       click_button("Log In")
 
       expect(current_path).to eq("/login")
-      expect(page).to have_content("Email or password incorrect")
+      expect(page).to have_content("incorrect credentials")
     end
   end
 end
