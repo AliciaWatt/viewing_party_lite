@@ -27,7 +27,7 @@ RSpec.describe 'new user page' do
     click_button('Create New User')
 
     expect(current_path).to eq('/register')
-    expect(page).to have_content("Name can't be blank, Email can't be blank, and Password can't be blank")
+    expect(page).to have_content("")
   end
   it 'shows error if passwords do not match' do
     fill_in 'user[name]', with: 'Greg2'

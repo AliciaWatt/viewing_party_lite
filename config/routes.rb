@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/users/:id/discover', to: 'users#discover'
+
+  get '/login', to: 'users#login_form'
+  post '/login', to: 'users#login_user'
+
   resources :users, only: %i[new index show create] do
     resources :movies, only: %i[index show] do
       resources :viewing_party, only: %i[new create]
