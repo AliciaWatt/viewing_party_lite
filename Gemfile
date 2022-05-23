@@ -44,9 +44,9 @@ group :development, :test do
   gem 'figaro'
   gem 'pry'
   gem 'rspec-rails'
-  # gem 'rubocop', '~> 1.18.0', require: false
-  # gem 'rubocop-performance', '~> 1.11.0', require: false
-  # gem 'rubocop-rails', '~> 2.11.0', require: false
+  gem 'rubocop', '~> 1.18.0', require: false
+  gem 'rubocop-performance', '~> 1.11.0', require: false
+  gem 'rubocop-rails', '~> 2.11.0', require: false
 end
 
 group :development do

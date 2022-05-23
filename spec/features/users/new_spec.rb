@@ -18,7 +18,7 @@ RSpec.describe 'new user page' do
   end
 
   it 'shows error message when wrong info is entered' do
-    User.create!(name: 'greg', email: 'greg@email.com')
+    User.create!(name: 'greg', email: 'greg@email.com', password: '123', password_confirmation: '123')
 
     fill_in 'user[name]', with: 'Greg2'
     fill_in 'user[email]', with: 'greg@email.com'
@@ -27,6 +27,17 @@ RSpec.describe 'new user page' do
     click_button('Create New User')
 
     expect(current_path).to eq('/register')
-    expect(page).to have_content('Error: please enter a name and unique email to register.')
+    expect(page).to have_content("Name can't be blank, Email can't be blank, and Password can't be blank")
+  end
+  it 'shows error if passwords do not match' do
+    fill_in 'user[name]', with: 'Greg2'
+    fill_in 'user[email]', with: 'greg@email.com'
+    fill_in 'user[password]', with: "password"
+    fill_in 'user[password_confirmation]', with: "passwordabc"
+
+    click_button("Create New User")
+
+    expect(current_path).to eq("/register")
+    expect(page).to have_content("Password confirmation doesn't match Password")
   end
 end

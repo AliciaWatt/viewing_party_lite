@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       redirect_to user_path(user)
     else
       redirect_to '/register'
-      flash[:alert] = 'Error: please enter a name and unique email to register.'
+      flash[:alert] = user.errors.full_messages.to_sentence
     end
   end
 
@@ -32,6 +32,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end

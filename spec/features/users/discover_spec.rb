@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'users discover' do
-  let!(:user1) {create(:user, name: 'Jeff', email: 'jeff@email.com') }
+  let!(:user1) { create(:user, name: 'Jeff', email: 'jeff@email.com') }
   let!(:user2) { create(:user, name: 'Amy', email: 'amy@email.com') }
 
   before(:each) do
